@@ -1,0 +1,138 @@
+/* ------------------------------------------------------------------ */
+/* GLOBAL VARIABLES */
+/* ------------------------------------------------------------------ */
+:root {
+  --colour-001: #12376e;
+  --colour-002: #34598f;
+}
+
+/* ------------------------------------------------------------------ */
+/* GENERAL STYLES */
+/* ------------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Alegreya', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* NAVBAR STYLES */
+/* ------------------------------------------------------------------ */
+
+.container {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(
+      6rem,
+      1fr
+    );
+  grid-template-rows: repeat(3, min-content);
+  grid-row-gap: 1.6rem;
+}
+
+.social-icons {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  /* border: solid red 2px; */
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  align-items: center;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  color: var(--colour-001);
+  transition: all 0.2s;
+}
+
+.social-icon:hover {
+  color: var(--colour-002);
+  transform: rotate(360deg);
+}
+
+.first-nav {
+  grid-column: 6 / 10;
+  grid-row: 1 / 2;
+  /* border: solid red 2px; */
+}
+
+.first-nav-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: center;
+}
+
+.first-nav-link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--colour-001);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.first-nav-link:hover::after {
+  width: 100%;
+}
+
+.first-nav-link::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 0.1rem;
+  background-color: var(--colour-001);
+  transition: width 0.2s cubic-bezier(0.55, 0, 0.98, 0.54);
+  margin: auto; /* start displying from middle and then grow outwards */
+}
+
+.first-nav-link span {
+  font-size: 1.3rem;
+  color: var(--colour-002);
+}
+
+.first-nav-link i {
+  font-size: 1.3rem;
+  margin-right: 0.3rem;
+}
+
+.search {
+  grid-column: 8 / 10;
+  grid-row: 2 / 3;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  /* border: solid red 1px; */
+}
+
+.search-input {
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+  padding: 0.3rem 0.4rem;
+  font-size: 1.3rem;
+  border: none;
+  border-bottom: 0.1rem solid var(--colour-001);
+  outline: none;
+}
+
+.search-button {
+  grid-column: 10 / -1;
+  grid-row: 1 / 2;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
