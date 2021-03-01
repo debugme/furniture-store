@@ -6,6 +6,9 @@
   --colour-002: #34598f;
   --colour-003: #fffeee;
   --colour-004: #458a9f;
+  --colour-005: #cccccc;
+  --colour-006: #00154c;
+  --colour-007: #23487f;
 }
 
 /* ------------------------------------------------------------------ */
@@ -39,7 +42,7 @@ body {
       6rem,
       1fr
     );
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(3, min-content) 70vh;
   grid-row-gap: 1.6rem;
 }
 
@@ -257,4 +260,79 @@ body {
 
 .dropdown-list-link:hover {
   color: var(--colour-004);
+}
+
+/* ------------------------------------------------------------------ */
+/* BANNER STYLES */
+/* ------------------------------------------------------------------ */
+.slideshow {
+  display: none;
+}
+
+.banner {
+  grid-column: 2/ 10;
+  grid-row: 4 / 5;
+  background-color: var(--colour-005);
+  /* border: solid red 5px; */
+  position: relative;
+  text-align: center;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: solid blue 3px; */
+  text-transform: uppercase;
+}
+
+.banner-heading {
+  font-size: 10rem;
+  color: var(--colour-001);
+  padding: 6rem;
+}
+
+.banner-button {
+  width: 16rem;
+  height: 5rem;
+  background-image: linear-gradient(
+    to top,
+    var(--colour-006),
+    var(--colour-001),
+    var(--colour-007)
+  );
+  color: white;
+  border: 0.1rem solid white;
+  border-radius: 0.3rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-button-text-one {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  transition: top 0.2s;
+}
+
+.banner-button-text-two {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  transition: top 0.2s;
+}
+
+.banner-button:hover .banner-button-text-one {
+  top: -100%;
+}
+
+.banner-button:hover .banner-button-text-two {
+  top: 50%;
 }
