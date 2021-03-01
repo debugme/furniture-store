@@ -27,7 +27,7 @@ body {
 }
 
 /* ------------------------------------------------------------------ */
-/* NAVBAR STYLES */
+/* NAVBAR 1 STYLES */
 /* ------------------------------------------------------------------ */
 
 .container {
@@ -135,4 +135,73 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/* NAVBAR 2 STYLES */
+/* ------------------------------------------------------------------ */
+
+.dropdown {
+  display: none;
+}
+
+.second-nav {
+  grid-column: 2 / 10;
+  /* border: solid rebeccapurple 2px; */
+  border-top: 0.1rem solid var(--colour-001);
+  border-bottom: 0.1rem solid var(--colour-001);
+}
+
+.second-nav-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  list-style: none;
+}
+
+.second-nav-link {
+  text-align: center;
+  display: grid;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--colour-001);
+  padding: 0.8rem 0;
+  transition: all 0.5s 0.3s;
+}
+
+.second-nav-link::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.1rem;
+  background-color: var(--colour-001);
+  transition: width 0.5s cubic-bezier(0.55, 0, 0.98, 0.54),
+    background-color 0.5s 0.3s;
+  justify-self: start;
+}
+
+.second-nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.1rem;
+  background-color: var(--colour-001);
+  transition: width 0.5s cubic-bezier(0.55, 0, 0.98, 0.54),
+    background-color 0.5s 0.3s;
+  justify-self: end;
+}
+
+.second-nav-item:hover .second-nav-link {
+  background-color: var(--colour-001);
+  color: white;
+}
+
+.second-nav-item:hover .second-nav-link::before {
+  width: 100%;
+  background-color: white;
+}
+
+.second-nav-item:hover .second-nav-link::after {
+  width: 100%;
+  background-color: white;
 }
