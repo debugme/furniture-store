@@ -676,3 +676,63 @@ body {
   grid-column: 7 / 9;
   grid-row: 3 / 5;
 }
+
+/* ------------------------------------------------------------------ */
+/* CONTACT STYLES */
+/* ------------------------------------------------------------------ */
+
+.contact {
+  grid-column: 1 / -1;
+  grid-row: 8 / 9;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  background-color: var(--colour-001);
+  padding: 2rem 0;
+}
+
+.contact-heading {
+  justify-self: end;
+  font-size: 2rem;
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.contact-form input {
+  outline: none;
+  padding: 0.4rem 1rem;
+  border: 0.1rem solid white;
+}
+
+.contact-input {
+  border-radius: 5rem 0 0 5rem;
+  border-right: none;
+}
+
+.contact-button {
+  background-color: var(--colour-002);
+  color: white;
+  border-radius: 0 5rem 5rem 0;
+  border-left: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: var(--colour-001);
+}
+
+/* ------------------------------------------------------------------ */
+/* FOOTER STYLES */
+/* ------------------------------------------------------------------ */
+.footer {
+  grid-column: 2 / 10;
+  grid-row: 9 / 10;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 2rem 0 3rem 0;
+  color: var(--colour-002);
+}
