@@ -11,6 +11,7 @@
   --colour-007: #23487f;
   --colour-008: #bbbbbb;
   --colour-009: #d38800;
+  --colour-010: #777777;
 }
 
 /* ------------------------------------------------------------------ */
@@ -44,7 +45,7 @@ body {
       6rem,
       1fr
     );
-  grid-template-rows: repeat(3, min-content) 70vh;
+  grid-template-rows: repeat(3, min-content) 70vh min-content;
   grid-row-gap: 1.6rem;
 }
 
@@ -389,7 +390,7 @@ body {
 }
 
 .slide-button:focus {
-  background-color: var(--colour-one);
+  background-color: var(--colour-001);
 }
 
 .slide-button-one:focus ~ .slideshow-wrapper {
@@ -452,4 +453,70 @@ body {
   90% {
     left: 0;
   }
+}
+
+/* ------------------------------------------------------------------ */
+/* DAY OFFER STYLES */
+/* ------------------------------------------------------------------ */
+
+.day-offer {
+  grid-column: 2 / 10;
+  grid-row: 5 / 6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  grid-gap: 1.6rem 3.2rem;
+  justify-items: center;
+}
+
+.day-offer-image-one {
+  grid-column: 1 / 3;
+  grid-row: 1 / -1;
+  width: 100%;
+}
+
+.day-offer-heading {
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+  font-size: 6rem;
+  color: var(--colour-007);
+}
+
+.day-offer-paragraph {
+  grid-column: 3 / -1;
+  grid-row: 2 / 3;
+  font-size: 3rem;
+  color: var(--colour-002);
+}
+
+.day-offer-button {
+  grid-column: 3 / -1;
+  grid-row: 3 / 4;
+  background-image: linear-gradient(
+    to top,
+    var(--colour-006),
+    var(--colour-001),
+    var(--colour-007)
+  );
+  color: white;
+  font-size: 1.4rem;
+  width: 16rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: 0.2rem 0.2rem 1rem var(--colour-010);
+}
+
+.day-offer-button:hover {
+  box-shadow: 0.2rem 0.2rem 2rem var(--colour-010);
+  cursor: pointer;
+}
+
+.day-offer-image-two {
+  grid-column: 3 / -1;
+  grid-row: 4 / -1;
+  width: 100%;
+  align-self: end;
 }
