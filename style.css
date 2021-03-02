@@ -12,6 +12,9 @@
   --colour-008: #bbbbbb;
   --colour-009: #d38800;
   --colour-010: #777777;
+  --colour-011: #efefef;
+  --colour-012: #fffddd;
+  --colour-013: rgba(0, 0, 0, 0.3);
 }
 
 /* ------------------------------------------------------------------ */
@@ -45,7 +48,7 @@ body {
       6rem,
       1fr
     );
-  grid-template-rows: repeat(3, min-content) 70vh min-content;
+  grid-template-rows: repeat(3, min-content) 70vh repeat(5, min-content);
   grid-row-gap: 1.6rem;
 }
 
@@ -519,4 +522,70 @@ body {
   grid-row: 4 / -1;
   width: 100%;
   align-self: end;
+}
+
+/* ------------------------------------------------------------------ */
+/* BEST SELLING FURNITURE STYLES */
+/* ------------------------------------------------------------------ */
+
+.best-selling-furniture {
+  grid-column: 2 / 10;
+  grid-row: 6 / 7;
+}
+
+.best-selling-furniture-header {
+  font-size: 4.5rem;
+  color: var(--colour-007);
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.best-selling-furniture-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 6.4rem 6.4rem;
+}
+
+.best-selling-furniture-card {
+  background-color: var(--colour-011);
+  overflow: hidden;
+  box-shadow: 0 1.5rem 6rem var(--colour-013);
+}
+
+.best-selling-furniture-image {
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.best-selling-furniture-heading {
+  background-color: var(--colour-012);
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--colour-004);
+  padding: 0.5rem 0;
+  border-radius: 0.2rem;
+  transform: translateY(-50%);
+}
+
+.best-selling-furniture-paragraph {
+  font-size: 1.9rem;
+  color: var(--colour-007);
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.best-selling-furniture-button {
+  width: 100%;
+  padding: 1.6rem 0;
+  background-color: var(--colour-001);
+  font-size: 1.9rem;
+  color: white;
+  border: none;
+  border-radius: 0 0 0.3rem 0.3rem;
+  cursor: pointer;
+}
+
+.best-selling-furniture-button:hover {
+  background-color: var(--colour-007);
 }
