@@ -15,6 +15,39 @@
     <title>Furniture Store</title>
   </head>
   <body>
+    <input type="checkbox" id="show-hide-forms" />
+    <div class="forms-wrapper">
+      <label class="close-button" for="show-hide-forms">&#10005;</label>
+      <input type="checkbox" id="show-form" />
+      <div class="show-buttons-wrapper">
+        <label class="show-form-button show-signup-form" for="show-form"
+          >SignUp</label
+        >
+        <label class="show-form-button show-signin-form" for="show-form"
+          >SignIn</label
+        >
+      </div>
+
+      <form class="signup-form">
+        <h3 class="form-heading">Sign Up</h3>
+        <div class="fullname-inputs-wrapper">
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Second Name" />
+        </div>
+        <input class="form-input" type="text" placeholder="Username" />
+        <input class="form-input" type="email" placeholder="Email Address" />
+        <input class="form-input" type="password" placeholder="Password" />
+        <input class="form-button" type="submit" value="SIGN UP" />
+      </form>
+
+      <form class="signin-form">
+        <h3 class="form-heading">Sign In</h3>
+        <input class="form-input" type="email" placeholder="Email Address" />
+        <input class="form-input" type="password" placeholder="Password" />
+        <input class="form-button" type="submit" value="SIGN IN" />
+      </form>
+    </div>
+
     <div class="container">
       <ul class="social-icons">
         <li class="social-icon-item">
@@ -46,7 +79,9 @@
         <ui class="first-nav-list">
           <li class="first-nav-item">
             <a href="#" class="first-nav-link">
-              <i class="fas fa-sign-in-alt"></i>SignUp/SignIn
+              <label for="show-hide-forms">
+                <i class="fas fa-sign-in-alt"></i>SignUp/SignIn
+              </label>
             </a>
           </li>
 

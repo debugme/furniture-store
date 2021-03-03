@@ -15,6 +15,8 @@
   --colour-011: #efefef;
   --colour-012: #fffddd;
   --colour-013: rgba(0, 0, 0, 0.3);
+  --colour-014: #eeeeee;
+  --colour-015: #ffffff;
 }
 
 /* ------------------------------------------------------------------ */
@@ -35,6 +37,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* ------------------------------------------------------------------ */
@@ -735,4 +738,91 @@ body {
   font-size: 1.6rem;
   padding: 2rem 0 3rem 0;
   color: var(--colour-002);
+}
+
+/* ------------------------------------------------------------------ */
+/* MODAL STYLES */
+/* ------------------------------------------------------------------ */
+
+.forms-wrapper {
+  background-color: var(--colour-014);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 2rem;
+  border: 0.1rem solid var(--colour-002);
+  border-radius: 0.3rem;
+}
+
+.show-buttons-wrapper {
+  display: flex;
+  padding: 1rem;
+}
+
+.show-form-button {
+  flex: 0 1 50%;
+  background-color: var(--colour-001);
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  border: 0.1rem solid var(--colour-014);
+  cursor: pointer;
+}
+
+.form-heading {
+  font-size: 2rem;
+  color: var(--colour-001);
+  text-transform: uppercase;
+  padding: 1rem 0 0 0.2rem;
+}
+
+.forms-wrapper form {
+  width: 50rem;
+  padding: 1rem;
+}
+
+.forms-wrapper form input:not(.form-button) {
+  background-color: var(--colour-015);
+  color: var(--colour-010);
+  padding: 1.3rem;
+  margin: 0.3rem 0;
+  border: o.2rem solid var(--colour-014);
+  outline: none;
+}
+
+.fullname-inputs-wrapper {
+  display: flex;
+}
+
+.fullname-inputs-wrapper input {
+  width: 50%;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.form-button {
+  width: 35%;
+  background-color: var(--colour-009);
+  color: white;
+  letter-spacing: 0.3rem;
+  padding: 1rem;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+.close-button {
+  font-size: 1.5rem;
+  color: var(--colour-006);
+  font-weight: 600;
+  position: absolute;
+  top: 1.3rem;
+  right: 3.5rem;
+  cursor: pointer;
 }
